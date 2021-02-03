@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(gcc -c $CFILE) > c
+gcc -E $CFILE > c
