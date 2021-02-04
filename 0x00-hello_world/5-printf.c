@@ -1,7 +1,10 @@
 #include <stdio.h>
 
-/* Program to print a string */
-
+/**
+ * main - Prints
+ * Return: zero
+ *
+ */
 int main(void)
 {
 
