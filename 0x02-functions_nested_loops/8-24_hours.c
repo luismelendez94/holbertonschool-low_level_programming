@@ -2,9 +2,8 @@
 #include "holberton.h"
 
 /**
- * main - Print Combination of 2 digits numbers
+ * jack_bauer - Print every minute of the day
  *
- * Return: zero
  */
 void jack_bauer(void)
 {
