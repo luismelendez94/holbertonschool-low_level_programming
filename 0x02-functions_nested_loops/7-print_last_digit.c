@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "holberton.h"
 
 /**
  * print_last_digit - Find the last digit of a number
@@ -8,5 +9,13 @@
  */
 int print_last_digit(int n)
 {
-	return (n % 10 + '0');
+	int lastDigit;
+
+	lastDigit = ((n % 10) + '0');
+
+	if (lastDigit < 0)
+		lastDigit = (lastDigit * -1);
+
+	_putchar(lastDigit);
+	return (lastDigit);
 }
