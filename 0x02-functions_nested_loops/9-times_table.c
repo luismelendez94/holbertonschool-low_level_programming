@@ -1,11 +1,8 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
- * add - Adds two integers
- * @i: First number
- * @j: Second number
+ * times_table - print a 9 times table
  *
- * Return: the answer
  */
 void times_table(void)
 {
@@ -21,13 +18,13 @@ void times_table(void)
 			r = i * j;
 			r1 = ((r / 10) + '0');
 
-			if (r1 == '0')
-			{
-				_putchar(' ');
-			}
-			else
+			if (r1 != '0')
 			{
 				_putchar(r1);
+			}
+			else if (j > 0)
+			{
+				_putchar(' ');
 			}
 			_putchar((r % 10) + '0');
 			if (j != 9)
