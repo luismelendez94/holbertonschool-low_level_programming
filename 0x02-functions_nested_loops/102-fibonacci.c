@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	int i, n, t1 = 0, t2 = 1, nextTerm;
+	int i, n, t1 = 1, t2 = 2, nextTerm;
 
-	for (i = 1; i <= 50; ++i)
+	for (i = 2; i <= 50; ++i)
 	{
 		printf("%d", t1);
 		if (i != 50)
@@ -20,5 +20,5 @@ int main(void)
 	}
 	printf("\n");
 
-	return 0;
+	return (0);
 }
