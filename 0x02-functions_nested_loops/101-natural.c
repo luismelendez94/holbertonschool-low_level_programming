@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-int main (void)
+/**
+ * main - Program that prints al natural 3 and 5 numbers bellow 1024
+ * Return: cero
+ */
+int main(void)
 {
 	int valor;
 	int sum;
@@ -14,5 +18,5 @@ int main (void)
 	}
 	printf("%d\n", sum);
 
-	return(0);
+	return (0);
 }
