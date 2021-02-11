@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-	int i, n, t1 = 1, t2 = 2, nextTerm;
+	int i, t1 = 1, t2 = 2, nextTerm;
 
 	for (i = 2; i <= 50; ++i)
 	{
-		printf("%d", t1);
+		printf("%u", t1);
 		if (i != 50)
 			printf(", ");
 		nextTerm = t1 + t2;
