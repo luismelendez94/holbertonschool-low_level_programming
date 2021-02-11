@@ -9,8 +9,23 @@
  */
 int _isalpha(int c)
 {
-	if (isalpha(c))
-		return (1);
-	else
-		return (0);
+	int i;
+
+	for (i = 'a'; i <= 'z'; i++)
+	{
+		if (c == i)
+		{
+			return (1);
+		}
+	}
+
+	for (i = 'A'; i <= 'Z'; i++)
+	{
+		if (c == i)
+		{
+			return (1);
+		}
+	}
+
+	return (0);
 }
