@@ -8,23 +8,17 @@
  */
 char *leet(char *s)
 {
-	int i;
-	char c;
+	int i, j;
+	char leet1[] = "AEOTL";
+	char leet2[] = "aeotl";
+	char leet3[] = "43071";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (c = 'a'; c <= 'z'; c++)
+		for (j = 0; j < 5; j++)
 		{
-			if (s[i] == 'A' || s[i] == 'a')
-				s[i] = '4';
-			if (s[i] == 'E' || s[i] == 'e')
-				s[i] = '3';
-			if (s[i] == 'O' || s[i] == 'o')
-				s[i] = '0';
-			if (s[i] == 'T' || s[i] == 't')
-				s[i] = '7';
-			if (s[i] == 'L' || s[i] == 'l')
-				s[i] = '1';
+			if (s[i] == leet1[j] || s[i] == leet2[j])
+				s[i] = leet3[j];
 		}
 	}
 
