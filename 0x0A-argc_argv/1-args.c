@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - Print the name of the executable
+ * main - Print the number of arguments
  * @argc: Argument count
  * @argv: Contains the number of arguments
  *
