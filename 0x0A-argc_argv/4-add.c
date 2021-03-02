@@ -9,22 +9,30 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, add = 0;
+	int i, add = 0, j;
+	int bools = 1;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (!(isdigit(argv[i])))
+			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				printf("ERROR\n");
-				return (1);
+				if (argv[i][j] < '0' || argv[i][j] > '9')
+				{
+					bools = 0;
+				}
 			}
 			add += atoi(argv[i]);
 		}
 	}
 
-	printf("%d\n", add);
-
+	if (bools == 1)
+		printf("%d\n", add);
+	if (bools == 0)
+	{
+		printf("Error\n");
+		return (1);
+	}
 	return (0);
 }
