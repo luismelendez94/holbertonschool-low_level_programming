@@ -11,8 +11,9 @@ int main(int argc, char *argv[])
 {
 	unsigned int mul = 0, num1, num2;
 	int i, j;
+/*	int *pointer;*/
 
-	if (argc < 3)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		exit(98);
@@ -34,7 +35,8 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[2]);
 
 	mul = num1 * num2;
-	printf("%d\n", mul);
+
+	printf("%u\n", mul);
 
 	return (0);
 }
