@@ -39,6 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		pointer[i] = s2[j];
 		i++;
 	}
+	pointer[i] = '\0';
 
 	return (pointer);
 }
