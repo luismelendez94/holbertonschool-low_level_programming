@@ -1,12 +1,11 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef _DOG_H
+#define _DOG_H
 
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 
 int _putchar(char c);
-void init_dog(struct dog *d, char *name, float age, char *owner);
 
 /**
  * struct dog - Information of the dog
@@ -23,4 +22,6 @@ struct dog
 	char *owner;
 };
 
-#endif /* DOG_H */
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
+#endif /* _DOG_H */
