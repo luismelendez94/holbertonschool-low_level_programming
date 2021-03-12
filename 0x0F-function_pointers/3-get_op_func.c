@@ -6,7 +6,7 @@
  *
  * Return: NULL if fails else, the function name
  */
-int (*get_op_func(char *s))(int x, int y)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -18,12 +18,11 @@ int (*get_op_func(char *s))(int x, int y)
 	};
 	int i = 0;
 
-	while (ops[i].op != NULL)
+	while (i < 5)
 	{
-		if (s == ops[i].op)
-			return (ops[i].f);
+		if (strcmp(s, ops[i].op) == 0)
+			break;
 		i++;
 	}
-
-	return (NULL);
+	return (ops[i].f);
 }

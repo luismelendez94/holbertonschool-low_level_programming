@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
 	int num1, num2, calc;
 	char *operator;
+	int (*func)(int, int);
 
 	if (argc != 4)
 	{
@@ -19,11 +20,8 @@ int main(int argc, char *argv[])
 	}
 
 	operator = argv[2];
-	if (*operator != '+' ||
-		*operator != '-' ||
-		*operator != '*' ||
-		*operator != '/' ||
-		*operator != '%')
+	func = get_op_func(argv[2]);
+	if (func == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
@@ -37,7 +35,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	calc = (get_op_func(operator)(num1, num2));
+	calc = func(num1, num2);
 	printf("%d\n", calc);
 
 	return (0);
