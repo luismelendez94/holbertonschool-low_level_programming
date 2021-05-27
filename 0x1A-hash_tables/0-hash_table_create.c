@@ -8,4 +8,20 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
+	hash_table_t *retHashTable;
+	unsigned int i;
+
+	retHashTable = (hash_table_t*) malloc(sizeof(hash_table_t));
+	if (retHashTable == NULL)
+		return (NULL);
+	
+	retHashTable->size = size;
+
+	retHashTable->array = (hash_node_t**) calloc(retHashTable->size, sizeof(hash_node_t));
+	if (retHashTable->array == NULL)
+		return (NULL);
+	for (i = 0; i < retHashTable->size; i++)
+		retHashTable->array[i] = NULL;
+
+	return (retHashTable);
 }
