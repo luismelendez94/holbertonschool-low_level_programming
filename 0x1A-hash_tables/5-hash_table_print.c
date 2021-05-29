@@ -12,7 +12,7 @@ void hash_table_print(const hash_table_t *ht)
 	size_t i = 0;
 	char *comaSpace = "";
 
-	if (ht == NULL)
+	if (ht == NULL || ht->array == NULL)
 		return;
 
 	printf("{");
