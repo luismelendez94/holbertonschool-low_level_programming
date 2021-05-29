@@ -18,7 +18,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	retHashTable->size = size;
 
-	retHashTable->array = calloc(retHashTable->size, sizeof(hash_node_t));
+	retHashTable->array = calloc(retHashTable->size, sizeof(hash_node_t *));
 	if (retHashTable->array == NULL)
 		return (NULL);
 	for (i = 0; i < retHashTable->size; i++)
