@@ -12,6 +12,9 @@ void hash_table_print(const hash_table_t *ht)
 	size_t i = 0;
 	char *comaSpace = "";
 
+	if (ht == NULL)
+		return;
+
 	printf("{");
 	for (; i < ht->size; i++)
 	{
