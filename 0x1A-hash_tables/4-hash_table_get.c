@@ -20,7 +20,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	arrayNode = ht->array[index];
 
 	if (arrayNode != NULL)
-		if (arrayNode->key != key)
+		if (strcmp(arrayNode->key, key) == 0)
 			return (arrayNode->value);
 
 	return (NULL);
