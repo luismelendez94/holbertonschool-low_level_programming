@@ -18,11 +18,12 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	for (; i < ht->size; i++)
 	{
-		if (ht->array[i])
+		currentNode = ht->array[i];
+		while (currentNode != NULL)
 		{
-			currentNode = ht->array[i];
 			printf("%s'%s': '%s'", comaSpace, currentNode->key, currentNode->value);
 			comaSpace = ", ";
+			currentNode = currentNode->next;
 		}
 	}
 	printf("}\n");
